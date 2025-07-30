@@ -2,6 +2,7 @@ import Fastify from 'fastify';
 import dotenv from 'dotenv';
 import { COUNT_INTERVAL, PORT } from './utils/const';
 import { prisma } from './db';
+import { piRoutes } from './routes/pi.routes';
 dotenv.config();
 
 const fastify = Fastify({ logger: true });
@@ -11,6 +12,8 @@ async function startPiLoop() {
   piInterval = setInterval(async () => {
   }, COUNT_INTERVAL);
 }
+
+fastify.register(piRoutes);
 
 fastify.addHook('onClose', async () => {
   clearInterval(piInterval);
