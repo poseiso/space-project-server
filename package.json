@@ -1,0 +1,29 @@
+{
+  "name": "space-project-server",
+  "description": "Backend server for Naluri Space Project",
+  "version": "1.0.0",
+  "license": "ISC",
+  "author": "Fajar",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsup src/server.ts --out-dir dist --format esm",
+    "start": "node dist/server.js",
+    "migrate": "prisma migrate dev --name init",
+    "seed": "ts-node prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/client": "latest",
+    "dotenv": "^17.2.1",
+    "fastify": "^4.22.2",
+    "vitest": "^3.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "prisma": "latest",
+    "ts-node": "latest",
+    "ts-node-dev": "latest",
+    "tsup": "latest",
+    "typescript": "latest"
+  }
+}

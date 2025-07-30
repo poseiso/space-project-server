@@ -1,0 +1,15 @@
+node_modules/
+
+dist/
+build/
+out/
+
+*.tsbuildinfo
+
+.env
+
+*.js
+*.d.ts
+/generated/prisma
+/prisma/dev.db
+generated
