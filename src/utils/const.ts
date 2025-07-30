@@ -4,3 +4,4 @@ export const DEFAULT_PI_DIGIT: number = 2;
 
 export const PORT: number = Number(process.env.PORT) || 4000;
 export const COUNT_INTERVAL: number = Number(process.env.COUNT_INTERVAL) || 1000;
+export const MAX_DIGITS: number = Number(process.env.MAX_DIGITS) || Infinity;
