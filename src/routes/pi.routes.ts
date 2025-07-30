@@ -1,5 +1,5 @@
 import { FastifyInstance } from 'fastify';
-import { handleGetPi, handlePause, handleResume, handleReset, healthCheck } from '../controllers/pi.controllers'
+import { handleGetPi, handlePause, handleReset, handleResume, healthCheck } from '../controllers/pi.controllers'
 
 export async function piRoutes(fastify: FastifyInstance) {
   fastify.get('/health', healthCheck);
